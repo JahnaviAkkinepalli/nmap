@@ -1,0 +1,51 @@
+ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.245.128  netmask 255.255.255.0  broadcast 192.168.245.255
+        inet6 fe80::20c:29ff:fea7:1b1  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:a7:01:b1  txqueuelen 1000  (Ethernet)
+        RX packets 28  bytes 2744 (2.6 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 45  bytes 4796 (4.6 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 84  bytes 6720 (6.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 84  bytes 6720 (6.5 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+                                                                                                                              
+┌──(jahnavi㉿kali)-[~]
+└─$ nmap -sS 192.168.245.0/24 -oN scan_result.txt
+
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-23 21:33 IST
+Nmap scan report for 192.168.245.1
+Host is up (0.00071s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+6646/tcp open  unknown
+MAC Address: 00:50:56:C0:00:08 (VMware)
+
+Nmap scan report for 192.168.245.2
+Host is up (0.00035s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: 00:50:56:F0:4A:D2 (VMware)
+
+Nmap scan report for 192.168.245.254
+Host is up (0.00045s latency).
+All 1000 scanned ports on 192.168.245.254 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: 00:50:56:FA:9F:D9 (VMware)
+
+Nmap scan report for 192.168.245.128
+Host is up (0.000012s latency).
+All 1000 scanned ports on 192.168.245.128 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 8.75 seconds
+                                  
